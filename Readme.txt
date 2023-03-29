@@ -1,4 +1,3 @@
-First
-Push
+Velmi zajimave mit funkcni github.
 
-Petr nema otce.
+#PetrNemaOtce
