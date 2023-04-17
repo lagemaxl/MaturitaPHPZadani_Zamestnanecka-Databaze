@@ -18,38 +18,33 @@
 </head>
 
 <body>
-	<!-- Register Form -->
+
+	<!-- Login Form -->
     <div style="text-align: center; margin-top: 25px">
 	<div class="container-fluid px-1 py-5 mx-auto">
     <div class="row d-flex justify-content-center">
         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
-            <h3>Register</h3>
-            <p class="blue-text">If you are already registered, just login below.</p>
+            <h3>Login</h3>
+            <p class="blue-text">Please enter your email and password.</p>
             <div class="card">
-                <form class="form-card" method="POST" action="register.php">
+                <h5 class="text-center mb-4">Welcome Back!</h5>
+                <form class="form-card" method="post" action="logincheck.php">
                     <div class="row justify-content-between text-left">
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Name<span class="text-danger"> *</span></label> <input type="text" id="name" name="name" placeholder="Enter your name"> </div>
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Surname<span class="text-danger"> *</span></label> <input type="text" id="surname" name="surname" placeholder="Enter your surname"> </div>
+                        <div class="form-group col-sm-12 flex-column d-flex"> <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label> <input type="email" id="email" name="email" placeholder="Enter your email" required> </div>
                     </div>
                     <div class="row justify-content-between text-left">
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Password<span class="text-danger"> *</span></label> <input type="password" id="password" name="password" placeholder="Enter your password"> </div>
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Check Password<span class="text-danger"> *</span></label> <input type="password" id="check_password" name="check_password" placeholder="Re-enter your password"> </div>
+                        <div class="form-group col-sm-12 flex-column d-flex"> <label class="form-control-label px-3">Password<span class="text-danger"> *</span></label> <input type="password" id="password" name="password" placeholder="Enter your password" required> </div>
                     </div>
-                    <div class="row justify-content-between text-left">
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label> <input type="text" id="email" name="email" placeholder="Enter your email"> </div>
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Org Name<span class="text-danger"> *</span></label> <input type="text" id="org_name" name="org_name" placeholder="Enter your organization name"> </div>
-                    </div>
-
-
                     <div class="row justify-content-end">
-                        <div class="form-group col-sm-6"> <button>
-                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Register</button> </div>
+                        <div class="form-group col-sm-12"> <button type="submit" class="btn-block btn-primary">Login</button> </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+    </div>
 
     <script>
 
