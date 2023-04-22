@@ -1,1 +1,9 @@
-<p>LOGIN</p>
+<?php
+    require "connection.php";
+
+    echo "aaaaaaaaaaaa";
+
+
+
+
+?>
