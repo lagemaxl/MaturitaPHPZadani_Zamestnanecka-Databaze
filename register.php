@@ -1,24 +1,28 @@
 <?php
+    if(isset($_POST)) {
+        header('Content-Type: text/html; charset=utf-8');
+
+        $connect = new mysqli("localhost", "root", "", "employeesdatabase", 3307) or die();
     
-    include "connection.php";
+        if($connect->connect_errno){
+            echo "Nastala chyba neumíte pracovat s DB: ".$connect->connect_error;
+        }
+        else{
+            echo "Připojili jste se úšpěšně k DB";
+        }
 
-    echo "otec";
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $password = $_POST['password'];
+        $email = $_POST['email'];
+        $depId = $_POST['department_id'];
 
-    /*if(isset($_POST)) {
+        $sql = 'INSERT INTO employees VALUES(NULL, \''.$name.'\', \''.$surname.'\', \''.$password.'\', \''.$email.'\', \''.$depId.'\');';
 
-    
-
-    $mySql = new mysqli();
-
-    $jmeno = $_POST['jmeno'];
-    $plemeno = $_POST['plemeno'];
-    $obrazek = $_POST['obrazek'];
-    $sluzba = $_POST['sluzba'];
-
-    $sql = "INSERT INTO kocici_salonek VALUES(NULL, '$jmeno', '$plemeno', $sluzba, '$obrazek', NOW());";
-
-    $mySql->query($sql);
-
-    print_r ($_POST);
-    }*/
+        $connect->query($sql);
+        
+        // redirect to login page
+        header('Location: login.php');
+        exit();
+    }
 ?>
